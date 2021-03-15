@@ -55,7 +55,7 @@ body{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 65px;
+    margin-top: 15px;
 
 }
 .up ul{
@@ -103,8 +103,8 @@ button.typeBtn{
 .fonMor{
     width: 1030px;
     margin: 0 auto;
-    margin-top: -595px;
-    margin-bottom: 345px;
+    margin-top: -545px;
+    margin-bottom: 295px;
 
 }
 .fonLabel{
