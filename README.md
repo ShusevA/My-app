@@ -1,1 +1,1 @@
-# My-app
+# SASS Application
