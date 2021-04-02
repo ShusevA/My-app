@@ -1,0 +1,518 @@
+@import './main.scss';
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+$max-lg:1199px;
+$max-md: 991px;
+$max-sm: 767px;
+$max-xm: 575px;
+
+
+$color-button: #2500f9;
+$color-head: #242f51;
+$color-text:#616368;
+$color-btn-text: white;
+$color-background: #f5f7fa;
+
+
+
+@mixin width-col($name) {
+    .#{$name}-col-1 {width: 8.33%;}
+    .#{$name}-col-2 {width: 16.66%;}
+    .#{$name}-col-3 {width: 25%;}
+    .#{$name}-col-4 {width: 33.33%;}
+    .#{$name}-col-5 {width: 41.66%;}
+    .#{$name}-col-6 {width: 50%;}
+    .#{$name}-col-7 {width: 58.33%;}
+    .#{$name}-col-8 {width: 66.66%;}
+    .#{$name}-col-9 {width: 75%;}
+    .#{$name}-col-10 {width: 83.33%;}
+    .#{$name}-col-11 {width: 91.66%;}
+    .#{$name}-col-12 {width: 100%;}
+}
+
+@mixin font-titel {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: $color-head;
+}
+@mixin font-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: $color-text;
+}
+@mixin font-elements {
+    font-family: 'Poppins';
+}
+
+
+
+.fon{
+    max-width: 1600px;
+    background-image: url(../imgs/fon2.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 235px;
+}
+.typeBtn{
+    padding: 14px 40px;
+    border-radius: 50px;
+    border: 2px solid $color-button;
+    background-color: $color-button;
+
+    @include font-titel;
+    font-size: 16px;
+    color: $color-btn-text;
+    outline: none;
+}
+.contaner{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+.fonHead{
+    @include font-titel;
+    font-size: 36px;
+    line-height: 46px;
+}
+.fonText{
+    @include font-text;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+    .contaner{
+
+        .up{
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (max-width: $max-sm){
+                img{
+                    padding-left: 20px;
+                }
+            }
+
+            .hidden{
+                display: none;
+                font-size: 40px;
+                margin-right: 20px;
+                color: $color-head;
+                cursor: pointer;
+                transition: all .5s;
+
+                &:hover{
+                    color: $color-btn-text;
+                    background-color: $color-head;
+                }
+
+                @media screen and (max-width: $max-sm){
+                    display: block;
+                }
+            }
+            .cloose-hidden{
+                display: none;
+                width: 100%;
+                height: 0px;
+                opacity: 0;
+                background-color: rgba($color: #000000, $alpha: 1.0);
+                z-index: 1;
+                position: fixed;
+                top: 0;
+                right: 0;
+                font-size: 30px;
+                color: $color-btn-text;
+                padding-top: 20px;
+                padding-right: 20px;
+                transition: height .8s;
+                
+                .cloose{
+                    float: right;
+                    text-align: end;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: red;
+                    }    
+                }
+                .list-hidden{
+                    padding-top: 50%;
+                    transform: translate(0, -30%);;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    list-style-type: none;
+
+                    a{
+                        color: $color-btn-text;
+                        text-decoration: none;
+                        line-height: 50px;
+
+                    }
+                }
+           }
+           .cloose-hidden.active{
+               display: block;
+               height: 100%;
+               opacity: 1;
+           }
+            ul{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                @media screen and (max-width: $max-sm){
+                    display: none;
+                }
+
+                li{
+                    list-style-type: none;
+ 
+                    a{
+                        @include font-text;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+                }
+                li + li{
+                    @media screen and(min-width: $md) {
+                        margin-left: 15px;
+                    }
+                    @media screen and(min-width: $lg) {
+                        margin-left: 35px;
+                    }
+
+                }
+                .typeBtn{
+                    @media screen and(min-width: $md) {
+                        margin-left: 27px;
+                    }
+                    @media screen and(min-width: $lg) {
+                        margin-left: 57px;
+                    }
+                }
+            }
+        }
+        .fonMor{
+            padding-top: 245px;
+            padding-left: 70px;
+
+            .fonLabel{
+                max-width: 360px;
+                background-color: #e2eaed; 
+                border-radius: 20px; 
+                display: flex;
+                align-items: center;
+
+                span{
+                    padding-left: 10px;
+                    @include font-text;
+                    font-size: 18px;
+                    color: $color-head;
+                }
+            }
+            .fonHead{
+                @include font-titel;
+                font-size: 60px;
+                line-height: 75px;
+                margin: 25px 0;
+            }
+            .fonText{
+                @include font-text;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 40px;
+            }
+            .fonButtun {
+                .typeBtn{
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                }
+             
+                .Btn{
+                    @include font-elements;
+                    font-size: 16px;
+                    color: $color-button;
+                    margin-left: 20px;
+
+                    border-color: white;
+                    background-color: white;
+                    border-radius: 50px;
+                    border-style: none;
+                }
+            }
+        }
+    }
+
+
+.contaner{
+
+    .section1{
+        margin: 0 auto;
+        padding-top: 125px;
+        text-align: center;
+
+        .sectionHead{
+            margin: 0 auto;
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+        .sectionText{
+            margin: 0 auto;
+            font-size: 16px;
+            margin-bottom: 90px;
+        }        
+        .sectionAll{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+          .cardWrap{
+            margin: 0 -30px;    
+
+            .card{
+                display: flex;                
+                flex-direction: column;
+                margin: 0 30px;
+                margin-bottom: 70px;
+
+                img{
+                    margin-bottom: 35px;
+                }
+                .cardHead{
+                    margin: 0 auto;
+                    width: auto;
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                }            
+                .cardText{
+                    margin: 0 auto;
+                    font-size: 16px;
+                }
+            }
+        }
+        }
+    }
+
+
+.section2{
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+
+    .sectionHead-2{
+        margin: 0 auto;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .sectionText-2{
+        margin: 0 auto;
+        font-size: 16px;
+        margin-bottom: 65px;
+    }
+    .sectionAll2{
+        text-align: left;
+    
+        .section2-Blocks{
+            width: 100%;
+            background-color: $color-background;
+            margin-bottom: 10px;
+        
+            .choice{
+                position: relative;
+                width: 100%;
+                padding: 15px 0;
+                padding-left: 45px;
+                padding-right: 70px;
+                background-color: $color-background;
+                outline: none;
+                border: none;
+                text-align: left;
+
+                @include font-titel;
+                font-size: 20px;
+                cursor: pointer;
+            
+                &::after{
+                    content: "\02795";
+                    margin-right: 35px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+                &.active::after{
+                    content: "\2014";
+                }
+            }
+            .choiceText{
+                display: none;
+                width: 100%;
+                margin-top: -10px;
+                margin-bottom: 10px;
+                padding: 15px 90px 75px 45px;
+                background-color: $color-background;
+                font-size: 16px;
+            }
+        }
+    }
+}
+}    
+
+
+.contaner.mor{
+    padding: 100px 0;
+    text-align: center;
+
+    .fonHead,
+    .fonText{
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    
+        .el{
+            padding: 30px;
+
+            .fonHead{
+                font-size: 20px;
+            }
+        }
+
+    .buttons{
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    
+        button {
+            background-color: transparent;
+            color: $color-button;
+            transition: all .3s;
+            margin-bottom: 10px;
+        
+            &:hover{
+                cursor: pointer;
+                background-color: $color-button;
+                color: $color-btn-text;
+            }
+        
+            &.active{
+                cursor: pointer;
+                background-color: $color-button;
+                color: $color-btn-text;
+            }
+        }
+    }
+}
+    .fil{
+        background-color: $color-background;
+    
+        .foto{
+            position: relative;
+            height: 38.5vh;
+        
+            img{
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+            }
+            .hid{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                text-align: center;
+                opacity: 0;
+                transition: all .3s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & .fonHead{
+                    font-size: 20px;
+                    color: white;
+                }
+                & .fonText{
+                    font-size: 16px;
+                    color: $color-btn-text;
+                }  
+            }
+
+            &:hover .hid{
+                opacity: 1;
+            }
+            &:hover img{
+                filter: brightness(20%);
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $xl){
+    @include width-col(xl);
+}
+ 
+@media screen and (min-width: $lg){
+    @include width-col(lg);
+}
+
+@media screen and (min-width: $md){
+    @include width-col(md);
+}
+
+@media screen and (min-width: $sm) and (max-width:$max-md){
+    @include width-col(sm);
+
+    .el:nth-child(2){
+        order: -1;
+    }
+    .contaner .section1 .sectionAll .cardWrap{
+        margin: 0 auto;    
+    }
+    
+    .fon .fonMor .fonHead{
+        font-size: 40px;
+    }
+    .fon .fonMor{
+        padding-left: 20px;
+    }
+    .fon{
+        background-position: 60% 0%;
+    }
+}
+
+@media screen and (max-width: $max-xm){
+    @include width-col(xm);
+
+    .contaner .section1 .sectionAll .cardWrap{
+        margin: 0 auto;    
+    }
+    .fon .fonMor .fonHead{
+        font-size: 40px;
+    }
+
+    .fon{
+        background-position: 0% 0%;
+    }
+    .fon .fonMor{
+        margin: 0 auto;
+        padding-left: 0px;
+        text-align: center;
+    }
+}
