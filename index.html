@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My app</title>
+    <title>SASS Application</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,8 +14,8 @@
     <header class="fon">
         <div class="contaner">
             <nav class="up md-col-12">
-                <img src="imgs/AppLab.jpg" alt="AppLab" srcset="">
-                <ul>
+                <img src="imgs/AppLab.jpg" alt="AppLab">
+                <ul class="ul">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Key Features</a></li>
                     <li><a href="#">Pricing</a></li>
@@ -27,12 +27,14 @@
                 <div class="cloose-hidden">
                     <div class="cloose">&#10060;</div>
                     <div class="list-hidden">
+                    <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Key Features</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">Testiminicl</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><button class="typeBtn">Try for free</button></li>
+                    </ul>
                     </div>
                 </div>
             </nav>
@@ -41,7 +43,7 @@
                     <img src="imgs/icon.png" alt="Icon">
                     <span>#1 Editiors Choice App of 2020</span>
                 </div>
-                <div class="fonHead">Best app for your modern lifestyle</div>
+                <h1 class="fonHead">Best app for your modern lifestyle</h1>
                 <div class="fonText lg-col-10">Increase productivity with a simple to-do app. app for managing your
                     personal
                     budgets.
@@ -55,7 +57,7 @@
     </header>
     <section class="contaner xm-col-11">
         <div class="section1 md-col-11 sm-col-11">
-            <div class="fonHead sectionHead md-col-5 sm-col-8">Why you should choose our app</div>
+            <h2 class="fonHead sectionHead md-col-5 sm-col-8">Why you should choose our app</h2>
             <div class="fonText sectionText md-col-7 sm-col-10">The rise of mobile devices transforms the way we consume
                 information
                 entirely
@@ -119,7 +121,7 @@
         </div>
 
         <div class="section2 md-col-10 sm-col-10">
-            <div class="fonHead sectionHead-2 md-col-8 sm-col-10">Frequently asked questions</div>
+            <h2 class="fonHead sectionHead-2 md-col-8 sm-col-10">Frequently asked questions</h2>
             <div class="fonText sectionText-2 md-col-8 sm-col-10">The rise of mobile devices transforms the way we
                 consume
                 information
@@ -181,10 +183,11 @@
                         workplace diversity and empowerment.</div>
                 </div>
             </div>
+        </div>
     </section>
     <section class="contaner mor md-col-11 sm-col-11 xm-col-11">
         <div class="row">
-            <div class="fonHead md-col-11 sm-col-11 xm-col-11">Feeling the buzz: Meet the Sugar Land Skeeters</div>
+            <h2 class="fonHead md-col-11 sm-col-11 xm-col-11">Feeling the buzz: Meet the Sugar Land Skeeters</h2>
             <div class="fonText md-col-9 sm-col-11 xm-col-11">The Tulsa Drillers, in conjunction with the 1921 Tulsa
                 Race Massacre
                 Centennial Commission, have announced plans to wear a special patch during the first month of the
@@ -211,28 +214,28 @@
                     tests.</div>
             </div>
             <div class="buttons md-col-12 sm-col-12">
-                <button isFill="on" filtred="all" class="typeBtn active">All</button>
-                <button isFill="off" filtred="t" class="typeBtn">Tehnika</button>
-                <button isFill="off" filtred="d" class="typeBtn">Availability</button>
-                <button isFill="off" filtred="p" class="typeBtn">Support</button>
+                <button data-isFill="on" data-filtred="all" class="typeBtn active">All</button>
+                <button data-isFill="off" data-filtred="t" class="typeBtn">Tehnika</button>
+                <button data-isFill="off" data-filtred="d" class="typeBtn">Availability</button>
+                <button data-isFill="off" data-filtred="p" class="typeBtn">Support</button>
             </div>
         </div>
         <div class="row fil">
-            <div filtred="d" class="foto lg-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="d" class="foto lg-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/D1.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/P.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/T.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
@@ -240,21 +243,21 @@
                 </div>
             </div>
 
-            <div filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/P1.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="d" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="d" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/D2.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/T1.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
@@ -262,21 +265,21 @@
                 </div>
             </div>
 
-            <div filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/P2.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/T2.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="d" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="d" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/D3.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
@@ -284,27 +287,28 @@
                 </div>
             </div>
 
-            <div filtred="d" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="d" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/D4.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="p" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/P3.png" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
-            <div filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
+            <div data-filtred="t" class="foto md-col-4 sm-col-6 xm-col-12">
                 <img src="imgs/T3.jpg" alt="">
                 <div class="hid">
                     <p class="fonHead">Helo people</p>
                     <p class="fonText">Are you ready</p>
                 </div>
             </div>
+        </div>
     </section>
 
 
@@ -327,15 +331,15 @@
             });
 
 
-            $('.typeBtn[filtred]').click(function () {
-                if ($(this).attr('isFill') == 'off') {
-                    $('.typeBtn[filtred]').attr('isFill', 'off').removeClass('active');
-                    $(this).attr('isFill', 'on').addClass('active');
+            $('.typeBtn[data-filtred]').click(function () {
+                if ($(this).attr('data-isFill') == 'off') {
+                    $('.typeBtn[data-filtred]').attr('data-isFill', 'off').removeClass('active');
+                    $(this).attr('data-isFill', 'on').addClass('active');
                     $('.fil > div').hide("200ms");
-                    $('.fil > div[filtred=' + $(this).attr('filtred') + ']').show("200ms");
-                    if ($(this).attr('filtred') == 'all') {
-                        $('.typeBtn[filtred]').attr('isFill', 'off').removeClass('active');
-                        $(this).attr('isFill', 'on').addClass('active');
+                    $('.fil > div[data-filtred=' + $(this).attr('data-filtred') + ']').show("200ms");
+                    if ($(this).attr('data-filtred') == 'all') {
+                        $('.typeBtn[data-filtred]').attr('data-isFill', 'off').removeClass('active');
+                        $(this).attr('data-isFill', 'on').addClass('active');
                         $('.fil > div').show("200ms");
                     }
                 }
